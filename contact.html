@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!--
+         Benjamin McKay - T00640281
+         Project - Rocking Horse Cidery
+      -->
+      
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Rocking Horse Cider</title>
+      <link href="reset.css" rel="stylesheet" />
+      <link href="styles.css" rel="stylesheet" /> 
+	  <script src="form_submit.js" defer></script>
+   </head>
+
+   <body>   
+   
+       <header>
+			<img src="photos/banner.png" id="banner" alt="Rocking Horse Cider" />
+			<nav> 
+				<a id="navicon" href="#"><img src="photos/navicon.png" alt="" /></a>
+				<ul>
+					<li><a href="index.html">ABOUT</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+					<li><a href="shop.html">SHOP</a></li>
+					<li><a href="cart.html">CART</a></li>
+				</ul>
+			</nav>
+	   </header>
+	   
+	   <article id="contactIntro">
+		    <p>Thank you for reaching out to us.</p>
+			<p>Your feedback and comments helps us maintain our exceptional quality cider.</p>
+			<p>Feedback is private and confidential.</p> 
+			<p>Rocking Horse will not share your contact information with third parties.</p><br/><br/>
+			<p>Required values are marked by an asterisk (*)</p>
+		</article>
+	        
+		<section id="contactBackground">
+			<form id="generalForm" action=”http://www.example.com/RHC/inquiries” method="post">
+				<fieldset class="contactForms">
+					<legend>Wholesale Inquiries / General Questions</legend>
+						
+					<div class="formRow">
+						<label for="name">Name*</label> 
+						<input name="name" id="name" type="text" placeholder="name" pattern="^[A-Za-z -]+$" required />
+					</div>
+							
+					<div class="formRow">
+						<label for="email">E-mail*</label> 
+						<input name="email" id="email" type="email" placeholder="email" required />
+					</div>
+							
+					<div class="formRow">
+						<label for="phone">Phone</label>
+						<input name="phone" id="phone" type="phone" placeholder="include area code" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" />
+					</div>
+							
+					<textarea name="generalComments" id="generalCommentBox" placeholder="Questions/Comments"></textarea>
+							
+					<div class="buttons">
+						<input type="submit" value="Submit" />
+						<input type="reset" value="Reset" />				
+					</div>
+							
+				</fieldset>
+			</form>
+				
+			<form id="feedbackForm" action=”http://www.example.com/RHC/feedback” method="post">
+						
+				<fieldset class="contactForms">
+					<legend>Product Feedback</legend>
+							
+					<div class="formRow">
+						<label for="product">Select Product</label>
+						<select name="product" id="product">
+							<option disabled selected value> -- select an option -- </option>
+							<option value="flavour1">Basil Plum</option>
+							<option value="flavour2">Rockin' Raspberry</option>
+							<option value="flavour3">Perfect Pear</option>
+							<option value="flavour4">Pumpkin Spice</option>
+							<option value="flavour5">Ginger Lime</option>
+							<option value="flavour5">Cherry Peppercorn</option>
+						</select>
+					</div>
+							
+					<div class="formRow">
+						<label for="rangeBox">Your Rating<br/>(0=poor; 10=great)</label>
+						<input name="serviceRate" id="rangeBox" type="range" value="5" step="1" min="0" max="10" />
+						10
+					</div>
+							
+					<div class="formRow"> 
+						<label><br/>Would you recommend this flavour?</label> 
+						<fieldset class="optGroup">
+							<label for="fYes">Yes</label>
+							<input type="radio" name="sFriend" id="fYes" value="yes" />
+							<label for="fNo">No</label>
+							<input type="radio" name="sFriend" id="fNo" value="no" />
+						</fieldset> 
+					</div>
+
+					<textarea name="feedbackComments" id="feedbackCommentBox" placeholder="Comments / How can we improve?"></textarea>
+						
+					<div class="formRow">
+						<label for="info">Where did you hear about us?</label>
+						<select name="info" id="info">
+							<option disabled selected value> -- select an option -- </option>
+							<option value="internet">Internet</option>
+							<option value="magazine">Magazine</option>
+							<option value="newspaper">Newspaper</option>
+							<option value="wordOfMouth">Word of Mouth</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+									
+					<div class="buttons">
+						<input type="submit" value="Submit" />
+						<input type="reset" value="Reset" />
+					</div>
+							
+				</fieldset>
+			</form>	
+		
+		</section>
+		
+	   <footer>
+			<p>Last Updated: 25/03/2021</p>
+	   </footer>
+	   
+   </body>
+</html>

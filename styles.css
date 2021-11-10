@@ -1,0 +1,563 @@
+/*
+   Benjamin McKay - T00640281
+   COMP 2681 - Project - Rocking Horse Cidery
+*/
+
+@charset "utf-8";
+
+@font-face {
+    font-family: Orbitron-Medium;
+    src: url('Orbitron-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Raleway-SemiBold;
+	src: url('Raleway-SemiBold.ttf') format('truetype');
+} 
+
+
+/* =============================
+BASE STYLES FOR ALL SCREEN SIZES 
+==============================*/
+
+
+/* HTML and Body styles */
+
+html {
+	background: linear-gradient(to top, white 30%, black);
+	background-repeat: no-repeat;
+	font-family: Verdana, Geneva, sans-serif;
+	height: 100%;
+}
+
+body {
+
+	box-shadow: rgb(51, 51, 51) 20px 0px 40px,  rgb(51, 51, 51) -20px 0px 40px,
+               inset rgb(51, 21, 21) 0px 0px 40px;
+	border-left: 2px solid darkred;
+	border-right: 2px solid darkred;
+	min-height: 100%;  
+	margin: 0px auto;
+	min-width: 320px;
+	max-width: 1020px;
+	width: 100%;
+}
+
+
+/* Header styles */
+
+header {
+	 background-color: black;
+}
+
+header img#banner {
+    width: 100%;
+}
+
+/* Heading Styles */
+
+h1 {
+	font-family: Orbitron-Medium;
+	text-decoration: underline;
+	text-indent: 30px;
+	margin-bottom: 5px;
+}
+
+
+/* Navigation list styles */
+
+nav ul li {
+	float: left;
+	font-size: 1em; 
+	font-family: Orbitron-Medium;
+	letter-spacing: 2px;
+	text-align: center; 
+	height: 2em;
+	line-height: 2em;
+	border: 2px solid darkred;
+	border-top: none;
+	border-bottom: none;
+	background-color: black;
+}
+
+nav ul li:first-of-type {
+	border-left: none;
+}
+
+nav ul li:last-of-type {
+	border-right: none;
+}
+
+nav ul li a {
+   display: block;
+   width: 100%;
+   color: white;
+}
+
+nav ul li a:hover {
+   background-color: darkred;
+}
+
+a#navicon {
+   display: none;
+}
+
+
+/* Background Styles */
+
+#aboutBackground {
+    position: relative; 
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+#aboutBackground::before {    
+    content: "";
+	background-image: url("photos/about_background.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; 
+	opacity: 0.4;
+}
+
+#contactBackground {
+	background: black;
+}
+
+#shopBackground {
+	position: relative;
+}
+
+#shopBackground::before {    
+    content: "";
+	background-image: url("photos/shop_background.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; 
+	opacity: 0.4;
+}
+
+
+/* Footer Styles */
+
+footer {
+	background-color: black;
+	color: white;
+	padding: 5px;
+	height: 35px;
+}
+
+
+/* Home Page Content Styles */
+
+#shopNowCTA {
+	position: relative;
+	font-family: Orbitron-Medium;
+	font-size: 1.8em;
+	letter-spacing: 4px;
+	width: 85%;
+	height: 75px;
+	text-align: center;
+	margin: 30px auto;
+	transition: color 0.1s ease-in 0.2s,
+	            font-size 0.7s ease,
+				letter-spacing 0.7s ease-out,
+				text-shadow 0.7s cubic-bezier(0.6, 0, 0.8, 0.5);
+}
+
+#shopNowLink {
+	text-decoration: none;
+	color: darkred;
+	font-size: .7em;
+}
+
+#shopNowCTA:hover {
+	color: darkred;
+	font-size: 2.2em;
+	letter-spacing: 0.1em;
+	text-shadow: rgba(0, 0, 0, 0.5) 15px -3px 8px;
+}
+
+.introArticles {
+	position: relative;
+	color: rgb(77,0,0);
+}
+
+
+/* Contact Page Content Styles */
+
+article#contactIntro {
+	padding: 20px;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(139,0,0,1) 0%, rgba(0,0,0,1) 100%);;
+	color: white;
+	font-family: Raleway-SemiBold;
+	font-size: 1.2em;
+}
+
+form#generalForm, form#feedbackForm {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	width: 70%;
+	margin: 0px auto;
+}
+
+fieldset.contactForms {
+	background: linear-gradient(to top, rgba(139,0,0,1) 0%, rgba(0,0,0,1) 100%);
+	border-radius: 60px;
+	border: 4px solid darkred;
+	-webkit-flex: 1 1 300px;
+	flex: 1 1 300px;
+	font-size: 0.85em;
+	padding: 10px;
+	margin: 10px;
+}
+
+div.formRow {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	margin: 15px 0px;
+	color: white;
+	letter-spacing: 1px;
+}
+
+div.formRow > * {
+	-webkit-flex: 1 1 150px;
+	flex: 1 1 150px;
+}
+
+/* Form Legend Styles */
+
+legend {
+	background-color: darkred;
+	color: white;
+	padding: 5px;
+	font-family: Orbitron-Medium;
+	letter-spacing: 1px;
+	font-size: 1.4em;
+	border: 4px outset black;
+}
+
+/* Form Input and Text Area Styles */
+
+textarea {
+	height: 100px;
+	width: 100%;
+	margin: 15px 0px;
+}
+
+/* Form Button Styles */
+
+.buttons {
+	text-align: center;
+	width: 100%;
+}
+
+input[type='submit'], input[type='reset'] {
+	text-align: center;
+	padding: 5px;
+	margin: 15px;
+	border: 3px outset black;
+	background: darkred;
+	color: white;
+	font-size: 1.1em;
+}
+
+/* Form Validation Styles */
+
+input#name:focus:valid, input#phone:focus:valid, 
+input#email:focus:valid {
+	background: rgb(220, 255, 220) url("photos/valid.png") bottom right/contain no-repeat;
+
+}
+
+input#name:focus:invalid, input#phone:focus:invalid, 
+input#email:focus:invalid {
+	background: rgb(255, 232, 233) url("photos/invalid.png") bottom right/contain no-repeat;
+}
+
+/* Shop Page Content Styles */
+
+#productFormWrapper {
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+form.products {
+	width: 300px;
+	margin: 25px auto;
+	color: white;
+}
+
+fieldset.shopForms {
+	background: linear-gradient(to bottom, rgba(139,0,0,1) 0%, rgba(0,0,0,1) 100%);
+	border-radius: 75px;
+	border: 4px solid darkred;
+	font-size: 0.85em;
+	padding: 15px;
+}
+
+img.bottle {
+	height: 95px;
+	width: 45px;
+	float: left;
+	margin-right: 10px;
+}
+
+#birthdayCountdown {
+	position: relative;
+	font-family: Orbitron-Medium;
+	color: rgb(77,0,0);
+	margin: 0px 0px 20px 60px;
+	padding-top: 25px;
+}
+
+.productQuantity {
+	width: 35px;
+}
+
+.addToCart {
+	text-align: center;
+	padding: 5px;
+	margin: 15px;
+	border: 3px outset black;
+	background: darkred;
+	color: white;
+	font-size: 1.1em;
+}
+
+/* Cart Page Content Styles */
+
+#cartContainer {
+	min-height: 850px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	background: linear-gradient(to top, white 30%, black);
+	color: white;
+	padding: 25px;
+}
+
+#cartContainer  p {
+	margin: 5px;
+	font-family: Orbitron-Medium;
+	letter-spacing: 3px;
+}
+
+#cartSubTotal {
+	color: black;
+}
+
+table {
+	font-size: 1.2em;
+	width: 80%;
+	margin: 25px auto;
+}
+
+table tr {
+	background: linear-gradient(to left, rgba(139,0,0,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+table td {
+	vertical-align: center;
+	text-align: center;
+}
+
+caption {
+	font-family: Orbitron-Medium;
+	font-size: 1.2em;
+	caption-side: bottom;
+	text-align: right;
+	margin-top: 30px;
+	padding: 15px;
+	margin-left: auto;
+}
+
+.removeProductButton {
+	height: 25px;
+	width: 25px;
+}
+
+#cartActionButtons {
+	margin-right: 50px;
+	margin-left: auto;
+}
+
+#checkout {
+	width: 100%;
+	text-align: center;
+	padding: 18px;
+	background: darkred;
+	color: white;
+	font-size: 1.1em;
+}
+
+/*===========================
+   Mobile Devices: 0 to 640px 
+============================*/
+
+@media only screen and (max-width: 640px) {
+
+	/*Mobile Navigation*/
+	
+   a#navicon {
+	   display: block;
+   }
+   
+   nav ul {
+	   display: none;
+	   position: absolute;
+       z-index: 100;
+	   width: 100%;
+   }
+   
+   a#navicon:hover+ul, nav ul:hover {
+	   display: block;
+   }
+   
+   nav ul li {
+	   width: 100%
+   }
+   
+   
+   /* Mobile Home Page Content Styles */
+   
+    #welcomeMessage {
+		margin-top: 75px;
+	}
+	
+   .introArticles {
+		position: relative;
+		width: 85%;
+		margin: 15px auto;
+		font-size: 1.1em;	
+		font-family: Raleway-SemiBold;
+	}
+
+	#didYouKnow {
+		position: relative;
+		margin: 40px auto;
+		width: 75%;
+		height: 200px;
+		font-size: 1em;
+		font-family: Raleway-SemiBold;
+	}
+	
+	#didYouKnow h1 {
+		font-size: 1.2em;
+	}
+	
+	/* Mobile Shop Page Content Styles */
+	
+	.bCnt {
+		float: left;
+		margin: 5px auto;
+		font-size: .8em;
+	}
+
+	#discount {
+		clear: left;
+		margin: 5px auto;
+		font-size: .7em;
+	}
+	
+	/* Mobile Home Page Content Styles */
+	
+	table {
+		font-size: .8em;
+	}
+}
+
+
+
+/*=============================================
+   Tablet and Desktop Styles: 641px and greater 
+============================================= */
+
+@media only screen and (min-width: 641px) {
+
+	/*Tablet and Desktop Navigation*/
+	
+	nav ul {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row nowrap;
+		flex-flow: row nowrap;	
+	}
+	
+	nav li {
+		-webkit-flex: 0 1 auto;
+		flex: 0 1 auto;
+		width: 25%;
+	}
+	
+	
+	/* Tablet and Desktop Home Page Content Styles */
+	
+	#philosophyMessage {
+		width: 75%;
+		margin: 35px auto;
+	}
+	
+	.introArticles {
+		position: relative;
+		width: 45%;
+		margin: 10px auto;
+		font-size: 2em;	
+		font-family: Raleway-SemiBold;
+	}
+	
+	#didYouKnow {
+		position: relative;
+		margin: 40px auto;
+		width: 75%;
+		height: 200px;
+		font-size: 1.5em;
+		font-family: Raleway-SemiBold;
+	}
+	
+	#didYouKnow h1 {
+		font-size: 1.7em;
+	}
+	
+	.dropCap:first-letter {
+		color: rgb(77,0,0);
+	    float: left;
+	    font-size: 75px;
+	    line-height: 60px;
+	    padding-top: 4px;
+	    padding-right: 8px;
+	    padding-left: 3px;
+	}
+	
+	/* Tablet and Desktop Shop Page Content Styles */
+	
+	.bCnt {
+		float: left;
+		margin: 10px;
+		font-size: 2em;
+	}
+
+	#discount {
+		clear: left;
+		margin-left: 40%;
+		font-size: 2em;
+	}
+}
+

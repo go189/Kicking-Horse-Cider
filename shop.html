@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!--
+         Benjamin McKay - T00640281
+         Project - Rocking Horse Cidery
+      -->
+      
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Rocking Horse Cider</title>
+      <link href="reset.css" rel="stylesheet" />
+      <link href="styles.css" rel="stylesheet" /> 
+	  <script src="bday_countdown.js" async></script>
+	  <script src="add_to_cart.js" async></script>
+   </head>
+
+   <body>   
+   
+       <header>
+			<img src="photos/banner.png" id="banner" alt="Rocking Horse Cider" />
+			<nav> 
+				<a id="navicon" href="#"><img src="photos/navicon.png" alt="" /></a>
+				<ul>
+					<li><a href="index.html">ABOUT</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+					<li><a href="shop.html">SHOP</a></li>
+					<li><a href="cart.html">CART</a></li>
+				</ul>
+			</nav>
+	   </header>
+	   
+	   <section id="shopBackground">
+	   
+			<div id="birthdayCountdown">
+				<div class="bCnt"><span id="days"></span><p>&nbsp; days</p></div>
+				<div class="bCnt"><span id="hrs"></span><p>&nbsp; hours</p></div>
+				<div class="bCnt"><span id="mins"></span><p>&nbsp; minutes</p></div>
+				<div class="bCnt"><span id="secs"></span><p>&nbsp; seconds</p></div> 
+				<p id="discount">until our 50% birthday discount.</p>
+			</div>
+			
+			<div id="productFormWrapper">
+			
+				<form class="products" id="product1Form" action="" method="">
+					<fieldset class="shopForms">
+						<legend>Basil Plum</legend>
+						<img class="bottle" src="photos/bottle.jpg" alt="Basil Plum" />
+						<p class="productDescription">
+						Plum and apple base cider, sweetened with apple juice that has been infused with fresh basil. This cider is a beautiful blend of herbs and fresh fruit.<br/><br/>4 x 500ml for $17.99</p>
+						<input name="quantity" class="productQuantity" id="product1Quantity" type="number" value="1" step="1" min="0" max="25" />
+						<input class="addToCart" id="product1AddToCart" type="button" value="Add To Cart" />
+					</fieldset>
+				</form>
+				
+				<form class="products" id="product2" action="" method="">
+					<fieldset class="shopForms">
+						<legend>Rockin' Raspberry</legend>
+						
+						<p class="productDescription"><img class="bottle" src="photos/bottle.jpg" alt="Rockin' Raspberry" />
+						Apple cider base sweetened with fresh raspberry juice, giving a tart delicious raspberry taste.<br/><br/><br/><br/>4 x 500ml for $17.99</p>
+						<input name="quantity" class="productQuantity" id="product2Quantity" type="number" value="1" step="1" min="0" max="25" />
+						<input class="addToCart" id="product2AddToCart" type="button" value="Add To Cart" />
+					</fieldset>
+				</form>
+				
+				<form class="products" id="product3" action="" method="">
+					<fieldset class="shopForms">
+						<legend>Perfect Pear</legend>
+						<p class="productDescription"><img class="bottle" src="photos/bottle.jpg" alt="Perfect Pear" />
+						Apple base cider back sweetened with fresh pressed pear juice, with a crisp refreshing taste.<br/><br/><br/><br/>4 x 500ml for $16.99</p>
+						<input name="quantity" class="productQuantity" id="product3Quantity" type="number" value="1" step="1" min="0" max="25" />
+						<input class="addToCart" id="product3AddToCart" type="button" value="Add To Cart" />
+					</fieldset>
+				</form>
+				
+				<form class="products" id="product4" action="" method="">
+					<fieldset class="shopForms">
+						<legend>Pumpkin Spice</legend>
+						<p class="productDescription"><img class="bottle" src="photos/bottle.jpg" alt="Pumpkin Spice" />
+						Apple cider base infused with all spice, nutmeg, cinnamon, cloves and ginger. Bringing a fun fall favorite to our cider.<br/><br/><br/><br/>4 x 500ml for $16.99</p>
+						<input name="quantity" class="productQuantity" id="product4Quantity" type="number" value="1" step="1" min="0" max="25" />
+						<input class="addToCart" id="product4AddToCart" type="button" value="Add To Cart" />
+					</fieldset>
+				</form>
+				
+				<form class="products" id="product5" action="" method="">
+					<fieldset class="shopForms">
+						<legend>Ginger Lime</legend>
+						<p class="productDescription"><img class="bottle" src="photos/bottle.jpg" alt="Loose Lemon" />Apple base cider, sweetened with fresh pressed apples and lime juice. Cold soaked in ginger to bring a bright flavour fun flavour to your glass.<br/><br/>4 x 500ml for $16.99</p>
+						<input name="quantity" class="productQuantity" id="product5Quantity" type="number" value="1" step="1" min="0" max="25" />
+						<input class="addToCart" id="product5AddToCart" type="button" value="Add To Cart" />
+					</fieldset>
+				</form>
+				
+				<form class="products" id="product6" action="" method="">
+					<fieldset class="shopForms">
+						<legend>Cherry Peppercorn</legend>
+						<p class="productDescription"><img class="bottle" src="photos/bottle.jpg" alt="Cherry Vanilla" />Apple cider base, sweetened with fresh pressed cherries. Gently infused with cracked black peppercorn for a perfectly balanced sweet and spice blend.<br/><br/>4 x 500ml for $16.99</p>
+						<input name="quantity" class="productQuantity" id="product6Quantity" type="number" value="1" step="1" min="0" max="25" />
+						<input class="addToCart" id="product6AddToCart" type="button" value="Add To Cart" />
+					</fieldset>
+				</form>
+			</div>
+	   </section>
+	   
+	   <footer>
+			<p>Last Updated: 25/03/2021</p>
+	   </footer>
+	   
+   </body>
+</html>
